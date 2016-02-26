@@ -40,14 +40,21 @@ xypos =[xout12(1) yout12(1)
     xout23(1) yout23(1)
     xout23(2) yout23(2)]
 
-XYPOS=round(xypos);
+%Separates the x coordinates and y coordinates into 1d arrays and plots
+%the intersection points on the same graph
 x=xypos(:,1);
 y=xypos(:,2);
 scatter(x,y);
-[ux,i,j]=unique(XYPOS,'rows');
-count = hist(j,unique(j));
-[M,I]=max(count);
-location=ux(I,:);
+
+
+
+XYPOS=round(xypos);
+
+
+[ux,i,j]=unique(XYPOS,'rows')
+count = hist(j,unique(j))
+[M,I]=max(count)
+location=ux(I,:)
 
 %scatter(location(1),location(2),'filled')
 
