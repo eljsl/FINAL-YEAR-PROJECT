@@ -56,7 +56,7 @@ count = hist(j,unique(j))
 [M,I]=max(count)
 location=ux(I,:)
 
-%scatter(location(1),location(2),'filled')
+scatter(location(1),location(2),'filled')
 
 
 %{
