@@ -51,7 +51,7 @@ scatter(x,y);
 XYPOS=round(xypos);
 
 
-[ux,i,j]=unique(XYPOS,'rows')
+[ux,i,j]=unique(xypos,'rows')
 count = hist(j,unique(j))
 [M,I]=max(count)
 actualx=mean(x)

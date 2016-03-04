@@ -14,12 +14,14 @@ x=[1.1
 %end
 
 for i=1:10
-if x(i)>3
+if x(i+1)=iswithin(x(i),
     z=x(i)*40
 else z=x(i)+3
 end
+y(i)=z
 end
 
+%{
 a = 10;
 k = 0.5;
 n = 2;
@@ -32,3 +34,4 @@ for m = 2:10
     xnew=x(1)
     valueofX(m) = xnew(end+a);
 end
+%}
