@@ -54,9 +54,14 @@ XYPOS=round(xypos);
 [ux,i,j]=unique(XYPOS,'rows')
 count = hist(j,unique(j))
 [M,I]=max(count)
+actualx=mean(x)
+actualy=mean(y)
 location=ux(I,:)
 
-scatter(location(1),location(2),'filled')
+scatter(location(1),location(2),'filled') %This bit is wrong
+scatter(actualx,actualy,'filled')
+
+%Hopefully paul may dissappear rig
 
 
 %{
