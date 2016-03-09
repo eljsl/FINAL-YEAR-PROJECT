@@ -1,4 +1,4 @@
-G=randi([0 6],243,1); %Create gene strategy
+G=randi([0 6],10,110); %Create gene strategy
 
 Env=createEnv %Create environments
 

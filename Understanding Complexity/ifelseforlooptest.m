@@ -1,12 +1,14 @@
 nrows = 4;
 ncols = 6;
-A = ones(nrows,ncols);
+A = randi([0 1],nrows,ncols)
+
+G=randi([1 6],6,1)
 
 for c = 1:ncols
     for r = 1:nrows
 
-        if r == c
-            A(r,c) = 2;
+        if A(r,c) == 1
+            B(r,c) = 2;
         elseif abs(r-c) == 1
             A(r,c) = -1;
         else
@@ -16,4 +18,3 @@ for c = 1:ncols
     end
 end
 A
-A(1,2)
