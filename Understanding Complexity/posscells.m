@@ -1,6 +1,6 @@
-function Poss=
+function Poss=posscells(A)
 
 sets = {[0 1 2], [0 1 2], [0 1 2], [0 1 2], [0 1 2]};
 [a b x y z] = ndgrid(sets{:});
 Poss = [a(:) b(:) x(:) y(:) z(:)]
-size(cartProd,1)
+size(Poss,1)
