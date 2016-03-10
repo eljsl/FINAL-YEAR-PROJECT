@@ -1,0 +1,19 @@
+Pos = (2,2)
+
+If Move == 1 && Pos(x-1,x) ~=2
+
+Pos(x-1,x)
+
+else Pos(x,x)
+
+&&  change score -5.
+
+
+
+
+
+
+for r=2:11,
+	for c=2:11,
+	if A(r-1,c)=2
+		B = [2 0 0 0 0]
