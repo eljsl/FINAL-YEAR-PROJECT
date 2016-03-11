@@ -13,10 +13,6 @@ Pos2=2;
 Poss=posscells;
 
 
-
-
-N=Env1(Pos1-1,Pos2);
-
 for i=1:200
         
   N=Env1(Pos1-1,Pos2);
@@ -26,12 +22,13 @@ for i=1:200
   C=Env1(Pos1,Pos2);
   
   Type=[N S E W C]; %Need to grab number from this to look into the gene to determine a move.
-%   T(i,:)=[N S E W C];
+  T(i,:)=[N S E W C];
+  TypeB3=[N*81+S*27+E*9+W*3+C]
   
-  [C,ia,ib]=intersect(Type,Poss,'rows')
-  I(i,:)=ib;
+%   [C,ia,ib]=intersect(Type,Poss,'rows')
+%   I(i,:)=ib;
   
-  Move=G(ib,:);
+  Move=G(TypeB3);
 
 %   Move=floor(4*rand)+1;
   M(i,:)=Move;
@@ -104,6 +101,9 @@ end
 %             end         
 %     end
 % end
+
+P1(i,:)=Pos1;
+P2(i,:)=Pos2;
 
 end
 
