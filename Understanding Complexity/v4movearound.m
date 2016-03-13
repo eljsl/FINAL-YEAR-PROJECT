@@ -12,7 +12,7 @@ Score=0;
  W=Env1(Pos1,Pos2-1);
  C=Env1(Pos1,Pos2);
  
- Type=[N*81+S*27+E*9+W*3+C];
+ Type=[N*81+S*27+E*9+W*3+C+1];
  T(i,:)=Type;
  Z=G(Type,i);
  Move=Z;
