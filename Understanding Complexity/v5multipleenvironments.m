@@ -1,11 +1,11 @@
-G=randi([1 5],243,200);
+% G=randi([1 5],243,200);
 Pos1=2;
 Pos2=2;
 Score=0;
 AllScores=0;
 
-% for p=1:1000, % 1000 generations
-%     G=randi([1 5],243,200);
+for p=1:1000, % 1000 generations
+    G=randi([1 5],243,200);
  
 for n=1:100,    % 200 environments
     Env=createEnv;
@@ -68,6 +68,6 @@ for n=1:100,    % 200 environments
  
 end
 
-% end
+end
 
  Pos=[P1 P2];
