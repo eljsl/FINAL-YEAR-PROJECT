@@ -4,7 +4,7 @@ Pos2=2;
 Score=0;
 AllScores=0;
 
-for p=1:1000, % 1000 generations
+% for p=1:1000, % 1000 generations
     G=randi([1 5],243,200);
  
 for n=1:100,    % 200 environments
@@ -57,9 +57,9 @@ for n=1:100,    % 200 environments
             end
         end
            
-        P1(i,:)=Pos1;
-        P2(i,:)=Pos2;
-        Zt(i,:)=Z;
+%         P1(i,:)=Pos1;
+%         P2(i,:)=Pos2;
+%         Zt(i,:)=Z;
         
     end
  
@@ -68,6 +68,6 @@ for n=1:100,    % 200 environments
  
 end
 
-end
+% end
 
- Pos=[P1 P2];
+%  Pos=[P1 P2];
