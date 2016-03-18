@@ -61,7 +61,7 @@ location=ux(I,:)
 scatter(location(1),location(2),'filled') %This bit is wrong
 scatter(actualx,actualy,'filled')
 
-%Hopefully paul may dissappear rig
+
 
 
 %{
