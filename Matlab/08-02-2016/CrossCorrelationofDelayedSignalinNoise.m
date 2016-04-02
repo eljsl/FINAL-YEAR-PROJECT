@@ -3,7 +3,7 @@ clear all
 rng default
 
 x = triang(20);
-y = [zeros(3,1);x]+0.3*randn(length(x)+3,1);
+y = [zeros(3,1);x]+randn(length(x)+3,1);
 
 subplot(2,1,1)
 stem(x,'filled')

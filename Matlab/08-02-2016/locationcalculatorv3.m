@@ -46,17 +46,18 @@ x=xypos(:,1);
 y=xypos(:,2);
 scatter(x,y);
 
+% for n=1:6
 
 
 XYPOS=round(xypos);
 
 
 [ux,i,j]=unique(xypos,'rows')
-count = hist(j,unique(j))
-[M,I]=max(count)
-actualx=mean(x)
-actualy=mean(y)
-location=ux(I,:)
+count = hist(j,unique(j));
+[M,I]=max(count);
+actualx=mean(x);
+actualy=mean(y);
+location=ux(I,:);
 
 scatter(location(1),location(2),'filled') %This bit is wrong
 scatter(actualx,actualy,'filled')
