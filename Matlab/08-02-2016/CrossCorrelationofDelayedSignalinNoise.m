@@ -1,4 +1,4 @@
-%http://uk.mathworks.com/help/signal/ug/cross-correlation-of-delayed-signal-in-noise.html
+ %http://uk.mathworks.com/help/signal/ug/cross-correlation-of-delayed-signal-in-noise.html
 clear all
 rng default
 
