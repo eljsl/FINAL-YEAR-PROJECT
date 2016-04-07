@@ -46,7 +46,7 @@ y=xypos(:,2);
 scatter(x,y);
 [ux,i,j]=unique(XYPOS,'rows');
 count = hist(j,unique(j));
-[M,I]=max(count);
+[M,I]=max(count)
 location=ux(I,:);
 
 %scatter(location(1),location(2),'filled')

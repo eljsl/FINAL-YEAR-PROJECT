@@ -1,5 +1,6 @@
  %http://uk.mathworks.com/help/signal/ug/cross-correlation-of-delayed-signal-in-noise.html
 clear all
+close all
 rng default
 
 x = triang(20);
@@ -17,6 +18,8 @@ title('Output Sequence')
 
 [xc,lags] = xcorr(y,x);
 [~,I] = max(abs(xc));
+b=abs(xc);
+z=max(b);
 
 figure
 stem(lags,xc,'filled')
