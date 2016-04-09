@@ -4,7 +4,7 @@ Pos2=2;
 % Score=0;
 AvgScorePerGene=zeros(200,1);
 
-for q=1:1;
+for q=1:1000;
     
 
         for p=1:200,
