@@ -1,4 +1,5 @@
-%define all the points of the hydrophones (the centre points of the circles)
+%define all the points of the hydrophones (the centre points of the
+%circles)
 x1=0;
 y1=0;
 x2=1;
