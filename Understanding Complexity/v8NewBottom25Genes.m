@@ -1,13 +1,14 @@
-% G=randi([1 6],243,1);
+clear all
+close all
 Pos1=2;
 Pos2=2;
 % Score=0;
-AvgScorePerGene=zeros(200,1);
+% AvgScorePerGene=zeros(200,1);
 
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:1,
+for q=1:1000,
 
     for p=1:200, % 200 genes
            
@@ -74,24 +75,29 @@ for q=1:1,
         AvgScoreForThatGene=mean(EnvScore);
         end
 
-    AvgScorePerGene(:,p)=AvgScoreForThatGene;
-    ASPG=sort(AvgScorePerGene,'descend');
+    ASPG(:,p)=AvgScoreForThatGene;
     end
 
-
-end
-
+Fitness=mean(ASPG);
+AllFitness(:,q)=Fitness;
+plot(AllFitness)
 % Mutating G
-G=[G;AllScore]; %Adds the scores to the bottom of G to sort
+G=[G;ASPG]; %Adds the scores to the bottom of G to sort
 [Y,I]=sort(G(end,:)); 
 G=G(:,I); % Sorts the genes by the score ascending
 G=G(1:end-1,:); % Now removes the last row (Scores) again
-Low50Top=G(1:121,1:50)+1; % Lowest 50 scoring, top half of each gene
-Low50Bottom=G(122:end,51:100); % Lowest 50 scoring, bottom half of gene
-New50=[Low50Top;Low50Bottom]; % Rearranged lowest 50 scoring
-G(:,1:50)=New50; % Putting rearranged 50 back into G
+NewBottom25Genes=randi([1 6],243,25);
+% New100=randi([1 6],243,100);
+% Best50Top=G(1:121,151:200); % Lowest 50 scoring, top half of each gene
+% Best50Bottom=G(122:end,151:200); % Lowest 50 scoring, bottom half of gene
+% New50=[Best50Bottom;Best50Top]; % Rearranged lowest 50 scoring
+G(:,1:25)=NewBottom25Genes; % Putting rearranged 50 back into G
+    
+end
 
-    ASforthatstrategy=mean(ASPG);
+
+
+%     ASforthatstrategy=mean(ASPG);
 %     Fitness(:,q)=ASforthatstrategy;
 %     plot(Fitness)
 

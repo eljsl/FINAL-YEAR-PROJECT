@@ -1,4 +1,5 @@
-% G=randi([1 6],243,1);
+clear all
+close all
 Pos1=2;
 Pos2=2;
 % Score=0;
@@ -7,7 +8,7 @@ Pos2=2;
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:1000,
+for q=1:100,
 
     for p=1:200, % 200 genes
            
@@ -85,11 +86,14 @@ G=[G;ASPG]; %Adds the scores to the bottom of G to sort
 [Y,I]=sort(G(end,:)); 
 G=G(:,I); % Sorts the genes by the score ascending
 G=G(1:end-1,:); % Now removes the last row (Scores) again
-New100=randi([1 6],243,100);
-Low50Top=G(1:121,1:50); % Lowest 50 scoring, top half of each gene
-Low50Bottom=G(122:end,1:50); % Lowest 50 scoring, bottom half of gene
-New50=[Low50Top;Low50Bottom]; % Rearranged lowest 50 scoring
-G(:,1:50)=New50; % Putting rearranged 50 back into G
+NewBottom100Genes=randi([1 6],243,100);
+G(:,1:100)=NewBottom100Genes;
+NewRow=randi([1 6],1,100);
+randrow=floor(243*rand)+1;
+% Best50Top=G(1:121,151:200); % Lowest 50 scoring, top half of each gene
+% SeconRandomBottom=G(122:end,151:200); % Lowest 50 scoring, bottom half of gene
+% New100=[RandomBottom;Best50Top]; % Rearranged lowest 50 scoring
+G(randrow,101:200)=NewRow; % Putting rearranged 50 back into G
     
 end
 
