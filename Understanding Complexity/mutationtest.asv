@@ -6,15 +6,15 @@ A(A<4)=floor(6*rand)+1;
 
 G=randi([1 6],243,200);
 
-for i=1:1000,
+for i=1:50
     
     for n=1:200,
         
     
-        Score=sum(G(100:200,n));
-        AllScore(:,n)=Score;
+    Score=sum(G(100:200,n));
+    AllScore(:,n)=Score;
     
-    end
+end
 
 Fitness=mean(AllScore);
 AllFitness(:,i)=Fitness;
