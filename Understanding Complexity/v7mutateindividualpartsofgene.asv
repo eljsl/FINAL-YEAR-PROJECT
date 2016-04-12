@@ -4,7 +4,7 @@ Pos2=2;
 % Score=0;
 AvgScorePerGene=zeros(200,1);
 
-for q=1:2;
+for q=1:1;
     
 
         for p=1:200, % 200 genes
@@ -74,13 +74,11 @@ for q=1:2;
 
         AvgScorePerGene(p,:)=AvgScoreForThatGene;
         ASPG=sort(AvgScorePerGene,'descend');
-        
+        ASforthatstrategy=ASP
         
         end
         
-        ASforthatstrategy=mean(ASPG);
-        Fitness(:,q)=ASforthatstrategy;
-        plot(Fitness)
+        
         
         
         

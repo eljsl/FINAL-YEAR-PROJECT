@@ -82,6 +82,7 @@ for q=1:2;
         Fitness(:,q)=ASforthatstrategy;
         plot(Fitness)
         
+        G()
         
         
 end

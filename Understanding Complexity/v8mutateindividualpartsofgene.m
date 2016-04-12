@@ -4,7 +4,7 @@ Pos2=2;
 % Score=0;
 AvgScorePerGene=zeros(200,1);
 
-for q=1:2;
+for q=1:20;
     
 
         for p=1:200, % 200 genes
@@ -82,6 +82,7 @@ for q=1:2;
         Fitness(:,q)=ASforthatstrategy;
         plot(Fitness)
         
+        G(floor(243*rand)+1)=floor(6*rand)+1;
         
         
 end
