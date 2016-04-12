@@ -12,7 +12,7 @@ for q=1:100,
     for p=1:200, % 200 genes
            
 
-        for n=1:100, % 100 environments
+        for n=1:1, % 100 environments
             Env=createEnv;
             Score=0;
             Pos1=2;
@@ -85,10 +85,11 @@ G=[G;ASPG]; %Adds the scores to the bottom of G to sort
 [Y,I]=sort(G(end,:)); 
 G=G(:,I); % Sorts the genes by the score ascending
 G=G(1:end-1,:); % Now removes the last row (Scores) again
-Low50Top=G(1:121,1:50); % Lowest 50 scoring, top half of each gene
-Low50Bottom=G(122:end,51:100); % Lowest 50 scoring, bottom half of gene
-New50=[Low50Bottom;Low50Top]; % Rearranged lowest 50 scoring
-G(:,1:50)=New50; % Putting rearranged 50 back into G
+New75=randi([1 6],243,75);
+% Low100Top=G(1:121,1:100); % Lowest 50 scoring, top half of each gene
+% Low100Bottom=G(122:end,1:100); % Lowest 50 scoring, bottom half of gene
+% New100=[Low100Top;Low100Bottom]; % Rearranged lowest 50 scoring
+G(:,1:75)=New75; % Putting rearranged 50 back into G
     
 end
 
