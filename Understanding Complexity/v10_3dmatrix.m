@@ -4,11 +4,16 @@ Pos1=2;
 Pos2=2;
 % Score=0;
 % AvgScorePerGene=zeros(200,1);
+Env = randi([0 1],12,12,100);
 
+Env(12,:,:)=2;
+Env(1,:,:)=2;
+Env(:,1,:)=2;
+Env(:,12,:)=2;
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:100,
+for z=1:100,
 
     for p=1:200, % 200 genes
            
@@ -79,10 +84,10 @@ for q=1:100,
     end
 
 Fitness=mean(ASPG);
-AllFitness(:,q)=Fitness;
+AllFitness(:,z)=Fitness;
 plot(AllFitness)
 Maxsofar=max(AllFitness);
-totalmax(:,q)=Maxsofar;
+totalmax(:,z)=Maxsofar;
 hold on
 plot(totalmax)
 % Mutating G
