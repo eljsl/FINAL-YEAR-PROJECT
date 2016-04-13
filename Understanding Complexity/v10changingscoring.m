@@ -1,19 +1,29 @@
-clear all
+clear AllFitness
+clear totalmax
 close all
 Pos1=2;
 Pos2=2;
+generations=1000; %The amount of iterations the mutatation does
+T=NaN(200,1);
+M=NaN(200,1);
+RunningScore=NaN(200,1);
+EnvScore=NaN(1,1); %This should be 100 by 1 when using 100 environments
+ASPG=NaN(1,200);
+AllFitness=NaN(1,generations);
+totalmax=NaN(1,generations);
+G=NaN(243,200);
 % Score=0;
 % AvgScorePerGene=zeros(200,1);
 
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:100,
+for q=1:generations,
 
     for p=1:200, % 200 genes
            
 
-        for n=1:10, % 100 environments
+        for n=1:1, % 100 environments
             Env=createEnv;
             Score=0;
             Pos1=2;
@@ -27,7 +37,7 @@ for q=1:100,
                             W=Env(Pos1,Pos2-1);
                             C=Env(Pos1,Pos2);
 
-                            Type=[N*81+S*27+E*9+W*3+C+1];
+                            Type=N*81+S*27+E*9+W*3+C+1;
                             T(i,:)=Type;
                             Z=G(Type,p);
                             Move=Z;
@@ -101,13 +111,3 @@ end
 
 
 
-%     ASforthatstrategy=mean(ASPG);
-%     Fitness(:,q)=ASforthatstrategy;
-%     plot(Fitness)
-
-%     G(floor(243*rand)+1)=floor(6*rand)+1;
-        
-       
-
-
-% AvgScore=mean(AllEnvScores);
