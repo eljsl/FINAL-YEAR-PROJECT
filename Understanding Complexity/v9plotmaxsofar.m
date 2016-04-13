@@ -8,7 +8,7 @@ Pos2=2;
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:100,
+for q=1:500,
 
     for p=1:200, % 200 genes
            
@@ -81,6 +81,10 @@ for q=1:100,
 Fitness=mean(ASPG);
 AllFitness(:,q)=Fitness;
 plot(AllFitness)
+Maxsofar=max(AllFitness);
+totalmax(:,q)=Maxsofar;
+hold on
+plot(totalmax)
 % Mutating G
 G=[G;ASPG]; %Adds the scores to the bottom of G to sort
 [Y,I]=sort(G(end,:)); 

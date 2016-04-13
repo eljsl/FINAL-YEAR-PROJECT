@@ -8,6 +8,7 @@ x3=0.5;
 y3=4.1;
 ang=0:0.01:2*pi;
 
+
 [d1,d2,d3]=getdistancev3(); %change this name as version updates
 
 xp1=d1*cos(ang);
@@ -22,13 +23,13 @@ yp3=d3*sin(ang);
 %plot the circles with radius r away from each hydrophone location
 close all
 figure(1)
-scatter(x1,y1,'c','d','filled')
+scatter(x1,y1,'bl','d','filled')
 hold on
-scatter(x2,y2,'c','d','filled')
+scatter(x2,y2,'g','d','filled')
 hold on
-scatter(x3,y3,'c','d','filled')
+scatter(x3,y3,'m','d','filled')
 hold on
-plot(x1+xp1,y1+yp1,x2+xp2,y2+yp2,x3+xp3,y3+yp3) 
+plot(x1+xp1,y1+yp1,'bl',x2+xp2,y2+yp2,'g',x3+xp3,y3+yp3,'m') 
 xlabel('X coordinate');
 ylabel('Y coordinate');
 hold on
@@ -52,13 +53,23 @@ xypos =[xout12(1) yout12(1)
 %the intersection points on the same graph
 x=xypos(:,1);
 y=xypos(:,2);
-scatter(x,y);
+scatter(x,y,'x');
 
 %Run function to find mean x and y coordinates of location
 [mx,my]=our_function(xypos)
 
 %Plot calculated position
 hold on
-scatter(mx,my,'r','filled')
+scatter(mx,my,100,'r','filled')
 grid on
 
+%Label hydrophones
+txt1 = 'Hydrophone 1 ';
+text(x1,y1,txt1,'VerticalAlignment','bottom','HorizontalAlignment','center')
+txt2 = 'Hydrophone 2 ';
+text(x2,y2,txt2,'VerticalAlignment','bottom','HorizontalAlignment','center')
+txt3 = 'Hydrophone 3 ';
+text(x3,y3,txt3,'VerticalAlignment','bottom','HorizontalAlignment','center')
+%Label source location
+txt4 = 'Source';
+text(mx,my,txt4,'VerticalAlignment','top','HorizontalAlignment','center')

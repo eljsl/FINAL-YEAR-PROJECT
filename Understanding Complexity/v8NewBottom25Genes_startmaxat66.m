@@ -1,14 +1,14 @@
 clear all
 close all
-Pos1=2;
-Pos2=2;
+Pos1=6;
+Pos2=6;
 % Score=0;
 % AvgScorePerGene=zeros(200,1);
 
 
  G=randi([1 6],243,200);    % 200 genes
  
-for q=1:100,
+for q=1:500,
 
     for p=1:200, % 200 genes
            

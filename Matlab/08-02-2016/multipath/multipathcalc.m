@@ -32,20 +32,30 @@ d1=1482*timediff1
 
 
 H=2;
-D=2.68;
-F=3.95;
-A=0.4;
+D=1;
+F=1.5;
+A=1;
 B=H-A;
 E=2*A;
 G=2*B;
-
 C=(((G^2)*E)-((F^2)*E)+((E^2)*G)-((D^2)*G))/(2*((G*D)+(E*F)))
-
-costheta1=(4*(A^2)-(2*C*D)-(D^2))/(4*A*C)
+costheta1=(4*(A^2)-(2*C*D)-(D^2))/(4*A*C);
 costheta2=-costheta1;
-
 theta1rad=acos(costheta1);
 theta2rad=-theta1rad;
-
 theta1deg = real(radtodeg(theta1rad))
 theta2deg = 180-theta1deg
+xdif=C*sind(theta1deg)
+ydif=C*cosd(theta1deg)
+xnew=0+xdif
+ynew=A+ydif
+Ax=0;
+Ay=A;
+
+figure
+scatter(xnew,ynew,'filled')
+hold on
+scatter(Ax,Ay,'filled')
+xlim([-1 3])
+ylim([0 2])
+grid on
