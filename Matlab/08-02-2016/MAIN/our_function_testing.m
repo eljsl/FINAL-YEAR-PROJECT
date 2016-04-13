@@ -1,9 +1,12 @@
-function [ avgx,avgy ] = our_function( xypos )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+xypos=[0.354996113918362,2.03728468897663;
+    0.354996113918362,-2.03728468897663;
+    -1.09734624087533,1.75282126084564;
+    1.59278972852075,1.31892836255595;
+    -0.651407478958693,1.35624933380197;
+    2.14125771483441,1.80667920376860]
 
 %Error avoiding
-a=sum(~isnan(xypos),1)
+a=sum(~isnan(xypos),1);
 if a(1)>2,
     
     
@@ -70,16 +73,9 @@ avgy=mean(yvals);
     
 % scatter(x,y,'b')
 % hold on
-% scatter(avgx,avgy,'r','filled')
+
 
 else
-% elseif
-%     poss=[xypos(1,1) xypos(2,1)] ;   
-%     poss=[xypos(1,2) xypos(2,2)];
-%     
-%     
-    
-    
 
 [row, col] = find(~isnan(xypos));
 ur=unique(row);
@@ -88,6 +84,7 @@ uc=unique(col);
 avgx=[xypos(1,1) xypos(2,1)]    
 avgy=[xypos(1,2) xypos(2,2)]
 
-
 end
 
+
+scatter(avgx,avgy,'k','filled')

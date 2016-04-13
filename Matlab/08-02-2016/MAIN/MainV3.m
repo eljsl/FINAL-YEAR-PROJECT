@@ -4,8 +4,8 @@ x1=0;
 y1=0;
 x2=1;
 y2=0;
-x3=0.5;
-y3=4.1;
+x3=4;
+y3=0;
 ang=0:0.01:2*pi;
 
 
@@ -56,7 +56,7 @@ y=xypos(:,2);
 scatter(x,y,'x');
 
 %Run function to find mean x and y coordinates of location
-[mx,my]=our_function(xypos)
+[mx,my]=our_function(xypos);
 
 %Plot calculated position
 hold on
@@ -73,3 +73,4 @@ text(x3,y3,txt3,'VerticalAlignment','bottom','HorizontalAlignment','center')
 %Label source location
 txt4 = 'Source';
 text(mx,my,txt4,'VerticalAlignment','top','HorizontalAlignment','center')
+

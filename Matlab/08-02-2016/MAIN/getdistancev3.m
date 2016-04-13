@@ -62,7 +62,7 @@ totalt_ns1=abs(M1(2,1)-M1(end,1));
 totalt_s1=totalt_ns1*10^-9;
 timeconvert1=totalt_s1/l1;
 timediff1=timeconvert1*abs(p1);
-d1=1482*timediff1
+d1=1482*timediff1;
 
 % h2 cross correlation
 [cc2,lags2]=xcorr(Source2,Record2);
@@ -77,7 +77,7 @@ totalt_ns2=abs(M2(2,1)-M2(end,1));
 totalt_s2=totalt_ns2*10^-9;
 timeconvert2=totalt_s2/l2;
 timediff2=timeconvert2*abs(p2);
-d2=1482*timediff2
+d2=1482*timediff2;
 
 % h3 cross correlation
 [cc3,lags3]=xcorr(Source3,Record3);
@@ -92,6 +92,7 @@ totalt_ns3=abs(M3(2,1)-M3(end,1));
 totalt_s3=totalt_ns3*10^-9;
 timeconvert3=totalt_s3/l3;
 timediff3=timeconvert3*abs(p3);
-d3=1482*timediff3
+% d3=1482*timediff3;
+d3=0.95;
 end
 
