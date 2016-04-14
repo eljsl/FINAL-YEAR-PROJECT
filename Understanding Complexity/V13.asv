@@ -4,7 +4,7 @@ clear totalmax
 close all
 Pos1=2;
 Pos2=2;
-generations=1000; %The amount of iterations the mutatation does
+generations=500; %The amount of iterations the mutatation does
 T=NaN(200,1);
 M=NaN(200,1);
 RunningScore=NaN(200,1);
