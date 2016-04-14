@@ -4,7 +4,7 @@ clear totalmax
 close all
 Pos1=2;
 Pos2=2;
-generations=1000; %The amount of iterations the mutatation does
+generations=100; %The amount of iterations the mutatation does
 T=NaN(200,1);
 M=NaN(200,1);
 RunningScore=NaN(200,1);
@@ -13,7 +13,7 @@ ASPG=NaN(1,200);
 AllFitness=NaN(1,generations);
 totalmax=NaN(1,generations);
 G=NaN(244,200);
-EnvTot=1;
+EnvTot=10;
 Rubbish=0;
 TotalRubbish=0;
 BestVal=zeros(1,generations);
@@ -101,7 +101,7 @@ for q=1:generations,
 %         AvgRubbish=TotalRubbish/EnvTot;
         end % End of Environments
 
-    
+    A(p)=AvgScoreForThatGene;
     G(244,p)=AvgScoreForThatGene;
     end % End of genes 
 
