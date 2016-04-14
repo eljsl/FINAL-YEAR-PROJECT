@@ -1,4 +1,4 @@
-function [ G ] = mutation( G )
+function [ G ] = mutationv2( G )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
