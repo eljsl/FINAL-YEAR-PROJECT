@@ -13,7 +13,7 @@ ASPG=NaN(1,200);
 AllFitness=NaN(1,generations);
 totalmax=NaN(1,generations);
 G=NaN(244,200);
-EnvTot=1;
+EnvTot=100;
 % Score=0;
 % AvgScorePerGene=zeros(200,1);
 
