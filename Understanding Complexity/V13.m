@@ -13,7 +13,15 @@ ASPG=NaN(1,200);
 AllFitness=NaN(1,generations);
 totalmax=NaN(1,generations);
 G=NaN(244,200);
+<<<<<<< HEAD
 EnvTot=1;
+=======
+<<<<<<< HEAD
+EnvTot=2;
+=======
+EnvTot=10;
+>>>>>>> origin/master
+>>>>>>> origin/master
 Rubbish=0;
 TotalRubbish=0;
 BestVal=zeros(1,generations);
