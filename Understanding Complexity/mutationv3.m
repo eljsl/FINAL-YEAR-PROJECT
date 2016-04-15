@@ -1,10 +1,4 @@
 function [ G ] = mutationv3( G )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
-
-% ProbFirst50=0.25;
-% ProbSecond50=0.25;
-% ProbBot100=0.25;
 
 for k=1:200,
     RanA=rand;
@@ -19,20 +13,20 @@ for k=1:200,
      if RanB<=0.5
         ParentB(1:243)=G(1:243,ceil(rand*200));
     elseif (RanB>0.5) && (RanB<0.75)
-        ParentB(1:243)=G(1:243,ceil(rand*80)+120);
+        ParentB(1:243)=G(1:243,ceil(rand*100)+100);
     elseif RanB>=0.75
-        ParentB(1:243)=G(1:243,ceil(rand*40)+160);
+        ParentB(1:243)=G(1:243,ceil(rand*50)+150);
      end %Pick random parent B
      
-Cutoff=ceil(rand*243);
-G(1:Cutoff,k)=ParentA(1:Cutoff);
-G(Cutoff:243,k)=ParentB(Cutoff:243);
+Cutoff=ceil(rand*243); %Value between 1 and 243 of where to split the gene
+G(1:Cutoff,k)=ParentA(1:Cutoff); %Replace part above cutoff with Parent A
+G(Cutoff:243,k)=ParentB(Cutoff:243); %Replace bottom part with Parent B
 % Formed new gene pool G with children from the previous pool
 
 end
 
-siz=numel(G);
-OnePerc=siz*0.01;
+siz=numel(G); %Defines the size of G
+OnePerc=siz*0.02; %Defines 2 percent of the size of G (the number of genes to alter)
 
 for y=1:OnePerc,
     
