@@ -93,6 +93,6 @@ totalt_s3=totalt_ns3*10^-9;
 timeconvert3=totalt_s3/l3;
 timediff3=timeconvert3*abs(p3);
 % d3=1482*timediff3;
-d3=0.95;
+d3=1482*timediff3;
 end
 

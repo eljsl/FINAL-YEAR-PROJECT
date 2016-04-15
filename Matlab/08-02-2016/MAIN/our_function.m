@@ -3,7 +3,7 @@ function [ avgx,avgy ] = our_function( xypos )
 %   Detailed explanation goes here
 
 %Error avoiding
-a=sum(~isnan(xypos),1)
+a=sum(~isnan(xypos),1);
 if a(1)>2,
     
     
