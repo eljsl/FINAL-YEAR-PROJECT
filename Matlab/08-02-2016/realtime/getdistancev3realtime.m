@@ -1,4 +1,4 @@
-function [ d1,d2,d3 ] = getdistancev3()
+function [ d1,d2,d3 ] = getdistancev3realtime()
 clear all
 close all
 
