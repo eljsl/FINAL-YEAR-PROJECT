@@ -56,6 +56,7 @@ figure
 scatter(xnew,ynew,'filled')
 hold on
 scatter(Ax,Ay,'filled')
-xlim([-1 3])
+xlim([-0.5 1.5])
 ylim([0 2])
+line([xnew Ax],[ynew Ay])
 grid on

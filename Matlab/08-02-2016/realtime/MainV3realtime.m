@@ -8,6 +8,7 @@ x3=0.5;
 y3=4.1;
 ang=0:0.01:2*pi;
 
+for i=1:10,
 
 [d1,d2,d3]=getdistancev3realtime(); %change this name as version updates
 
@@ -55,8 +56,10 @@ x=xypos(:,1);
 y=xypos(:,2);
 scatter(x,y,'x');
 
+
+
 %Run function to find mean x and y coordinates of location
-[mx,my]=our_functionrealtime(xypos);
+[mx,my]=our_functionrealtime(xypos,x3,y3);
 
 %Plot calculated position
 hold on
@@ -73,4 +76,7 @@ text(x3,y3,txt3,'VerticalAlignment','bottom','HorizontalAlignment','center')
 %Label source location
 txt4 = 'Source';
 text(mx,my,txt4,'VerticalAlignment','top','HorizontalAlignment','center')
+drawnow
+
+end
 

@@ -1,6 +1,8 @@
-function [ avgx,avgy ] = our_functionrealtime( xypos )
+function [ avgx,avgy ] = our_functionrealtime( xypos,x3,y3 )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
+x3;
+y3;
 
 %Error avoiding
 a=sum(~isnan(xypos),1);
@@ -84,10 +86,16 @@ else
 [row, col] = find(~isnan(xypos));
 ur=unique(row);
 uc=unique(col);
-    
-avgx=[xypos(1,1) xypos(2,1)]    
-avgy=[xypos(1,2) xypos(2,2)]
 
+dist1=sqrt(((xypos(1,1)-x3)^2)+((xypos(1,2)-y3)^2));
+dist2=sqrt(((xypos(2,1)-x3)^2)+((xypos(2,2)-y3)^2));
 
+if dist1<dist2,    
+        avgx=xypos(1,1);
+        avgy=xypos(1,2);
+else
+        avgx=xypos(2,1);   
+        avgy=xypos(2,2);
 end
 
+end
