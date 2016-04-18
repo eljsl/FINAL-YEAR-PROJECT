@@ -7,7 +7,7 @@ l1=length(M1)-1;
 close all
 figure
 subplot(211)
-% plot(microtime1,Source1)
+plot(Source1)
 subplot(212)
 plot(microtime1,Record1)
 
@@ -43,14 +43,15 @@ costheta1=(4*(A^2)-(2*C*D)-(D^2))/(4*A*C);
 costheta2=-costheta1;
 theta1rad=acos(costheta1);
 theta2rad=-theta1rad;
-theta1deg = real(radtodeg(theta1rad))
-theta2deg = 180-theta1deg
-xdif=C*sind(theta1deg)
-ydif=C*cosd(theta1deg)
-xnew=0+xdif
-ynew=A+ydif
+theta1deg = real(radtodeg(theta1rad));
+theta2deg = 180-theta1deg;
+xdif=C*sind(theta1deg);
+ydif=C*cosd(theta1deg);
+xnew=0+xdif;
+ynew=A+ydif;
 Ax=0;
 Ay=A;
+
 
 figure
 scatter(xnew,ynew,'filled')

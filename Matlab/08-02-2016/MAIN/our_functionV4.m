@@ -73,20 +73,23 @@ avgy=mean(yvals);
 % scatter(avgx,avgy,'r','filled')
 
 else
-% elseif
-%     poss=[xypos(1,1) xypos(2,1)] ;   
-%     poss=[xypos(1,2) xypos(2,2)];
-%     
-%     
-    
+
     
 
 [row, col] = find(~isnan(xypos));
 ur=unique(row);
 uc=unique(col);
-    
-avgx=[xypos(1,1) xypos(2,1)]    
-avgy=[xypos(1,2) xypos(2,2)]
+
+dist1=sqrt(((xypos(1,1)-x3)^2)+((xypos(1,2)-y3)^2));
+dist2=sqrt(((xypos(2,1)-x3)^2)+((xypos(2,2)-y3)^2));
+
+if dist1<dist2,    
+        avgx=xypos(1,1);
+        avgy=xypos(1,2);
+else
+        avgx=xypos(2,1);   
+        avgy=xypos(2,2);
+end
 
 
 end
