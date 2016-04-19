@@ -60,7 +60,7 @@ scatter(x,y,'x');
 
 %Plot calculated position
 hold on
-scatter(mx,my,100,'r','filled')
+scatter(mx,my,200,'r')
 grid on
 
 %Label hydrophones
