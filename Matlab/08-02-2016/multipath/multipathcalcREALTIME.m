@@ -31,11 +31,13 @@ timediff1=timeconvert1*abs(p1);
 d1=1482*timediff1
 
 
-for n=1:100,
+for n=1:1000,
 
 H=2;
-D=randi([4 12],1,1)/10;
-F=randi([4 12],1,1)/10;
+% D=randi([4 12],1,1)/10;
+% F=randi([4 12],1,1)/10;
+D = ((12-5).*rand(1,1) + 5)/10;
+F = ((15-10).*rand(1,1) + 10)/10;
 A=1;
 B=H-A;
 E=2*A;
@@ -56,12 +58,12 @@ Ay=A;
 
 
 figure(3)
-scatter(xnew,ynew,'filled')
+scatter(xnew,ynew,200,'filled','o','g')
 hold on
 scatter(Ax,Ay,'filled')
 % xlim([-0.5 1.5])
 ylim([0 2])
-line([xnew Ax],[ynew Ay])
+% line([xnew Ax],[ynew Ay])
 grid on
 drawnow
 

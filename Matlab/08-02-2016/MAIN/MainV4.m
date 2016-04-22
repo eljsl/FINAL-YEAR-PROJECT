@@ -21,8 +21,8 @@ xp3=d3*cos(ang);
 yp3=d3*sin(ang);
 
 %plot the circles with radius r away from each hydrophone location
-close all
-figure(1)
+% close all
+figure
 scatter(x1,y1,'bl','d','filled')
 hold on
 scatter(x2,y2,'g','d','filled')
