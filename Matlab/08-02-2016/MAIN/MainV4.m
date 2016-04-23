@@ -30,8 +30,8 @@ hold on
 scatter(x3,y3,'m','d','filled')
 hold on
 plot(x1+xp1,y1+yp1,'bl',x2+xp2,y2+yp2,'g',x3+xp3,y3+yp3,'m') 
-xlabel('X coordinate');
-ylabel('Y coordinate');
+xlabel('X position (metres)');
+ylabel('Y position (metres)');
 hold on
 
 %Calculate the points of intersection of the circles
