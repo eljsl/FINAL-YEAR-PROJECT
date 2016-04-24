@@ -23,11 +23,11 @@ yp3=d3*sin(ang);
 %plot the circles with radius r away from each hydrophone location
 % close all
 figure
-scatter(x1,y1,'bl','d','filled')
+scatter(x1,y1,100,'bl','d','filled')
 hold on
-scatter(x2,y2,'g','d','filled')
+scatter(x2,y2,100,'g','d','filled')
 hold on
-scatter(x3,y3,'m','d','filled')
+scatter(x3,y3,100,'m','d','filled')
 hold on
 plot(x1+xp1,y1+yp1,'bl--',x2+xp2,y2+yp2,'g--',x3+xp3,y3+yp3,'m--') 
 xlabel('X position (metres)');
@@ -53,14 +53,14 @@ xypos =[xout12(1) yout12(1)
 %the intersection points on the same graph
 x=xypos(:,1);
 y=xypos(:,2);
-scatter(x,y,'o','filled');
+scatter(x,y,100,'r','+');
 
 %Run function to find mean x and y coordinates of location
 [mx,my]=our_functionV4(xypos);
 
 %Plot calculated position
 hold on
-scatter(mx,my,200,'r')
+scatter(mx,my,80,'r','filled')
 grid on
 
 %Label hydrophones
