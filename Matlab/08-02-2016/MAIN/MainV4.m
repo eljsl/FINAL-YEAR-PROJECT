@@ -5,7 +5,7 @@ y1=0;
 x2=3;
 y2=0;
 x3=0;
-y3=3;
+y3=2.9;
 ang=0:0.01:2*pi;
 
 
@@ -29,9 +29,9 @@ scatter(x2,y2,'g','d','filled')
 hold on
 scatter(x3,y3,'m','d','filled')
 hold on
-plot(x1+xp1,y1+yp1,'bl',x2+xp2,y2+yp2,'g',x3+xp3,y3+yp3,'m') 
-xlabel('X coordinate');
-ylabel('Y coordinate');
+plot(x1+xp1,y1+yp1,'bl--',x2+xp2,y2+yp2,'g--',x3+xp3,y3+yp3,'m--') 
+xlabel('X position (metres)');
+ylabel('Y position (metres)');
 hold on
 
 %Calculate the points of intersection of the circles
@@ -53,7 +53,7 @@ xypos =[xout12(1) yout12(1)
 %the intersection points on the same graph
 x=xypos(:,1);
 y=xypos(:,2);
-scatter(x,y,'x');
+scatter(x,y,'o','filled');
 
 %Run function to find mean x and y coordinates of location
 [mx,my]=our_functionV4(xypos);
