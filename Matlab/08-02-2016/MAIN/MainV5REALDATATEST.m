@@ -43,7 +43,7 @@ scatter(x2,y2,100,'g','d','filled')
 hold on
 scatter(x3,y3,100,'m','d','filled')
 hold on
-scatter(x4,y4,100,'m','d','filled')
+scatter(x4,y4,100,'k','d','filled')
 hold on
 plot(x1+xp1,y1+yp1,'bl--',x2+xp2,y2+yp2,'g--',x3+xp3,y3+yp3,'m--',x4+xp4,y4+yp4,'k--') 
 xlabel('X position (metres)');
@@ -96,7 +96,9 @@ txt2 = 'Hydrophone 2 ';
 text(x2,y2,txt2,'VerticalAlignment','bottom','HorizontalAlignment','center')
 txt3 = 'Hydrophone 3 ';
 text(x3,y3,txt3,'VerticalAlignment','bottom','HorizontalAlignment','center')
+txt4 = 'Hydrophone 4 ';
+text(x4,y4,txt4,'VerticalAlignment','bottom','HorizontalAlignment','center')
 %Label source location
-txt4 = 'Source';
-text(mx,my,txt4,'VerticalAlignment','top','HorizontalAlignment','center')
+txt5 = 'Source';
+text(mx,my,txt5,'VerticalAlignment','top','HorizontalAlignment','center')
 

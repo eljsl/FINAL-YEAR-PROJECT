@@ -1,0 +1,86 @@
+function [ d1,d2,d3 ] = getdistancev4()
+
+H1=load('Test3H1');
+H2=load('Test3H2');
+H3=load('Test3H3');
+H4=load('Test3H4');
+
+time=(1:1:(125000*3))/125000;
+
+%h1 data retrieval
+figure
+plot(time,H1.('Source'))
+hold on
+plot(time,H1.('Record'))
+
+%h2 data retrieval
+figure
+plot(time,H2.('Source'))
+hold on
+plot(time,H1.('Record'))
+
+%h3 data retrieval
+M3 = csvread('Test3.csv',21,2,[21,2,721,6]);
+time3=M3(:,1);
+microtime3=time3*10^-9;
+Source3=((M3(:,2))+(M3(:,3)))/2;
+Record3=((M3(:,4))+(M3(:,5)))/2;
+l3=length(M3)-1;
+figure
+subplot(211)
+plot(microtime3,Source3)
+subplot(212)
+plot(microtime3,Record3)
+
+
+
+
+
+
+
+% h1 cross correlation
+[cc1,lags1]=xcorr(Source1,Record1);
+[max1,I1] = max(abs(cc1));
+p1=lags1(I1);
+figure
+plot(lags1,cc1)
+xlabel('lag')
+ylabel('Correlation measure')
+legend(sprintf('Maximum at lag %d',lags1(I1)))
+totalt_ns1=abs(M1(2,1)-M1(end,1));
+totalt_s1=totalt_ns1*10^-9;
+timeconvert1=totalt_s1/l1;
+timediff1=timeconvert1*abs(p1);
+d1=1482*timediff1;
+
+% h2 cross correlation
+[cc2,lags2]=xcorr(Source2,Record2);
+[max2,I2] = max(abs(cc2));
+p2=lags2(I2);
+figure
+plot(lags2,cc2)
+xlabel('lag')
+ylabel('Correlation measure')
+legend(sprintf('Maximum at lag %d',lags2(I2)))
+totalt_ns2=abs(M2(2,1)-M2(end,1));
+totalt_s2=totalt_ns2*10^-9;
+timeconvert2=totalt_s2/l2;
+timediff2=timeconvert2*abs(p2);
+d2=1482*timediff2;
+
+% h3 cross correlation
+[cc3,lags3]=xcorr(Source3,Record3);
+[max3,I3] = max(abs(cc3));
+p3=lags3(I3);
+figure
+plot(lags3,cc3)
+xlabel('lag')
+ylabel('Correlation measure')
+legend(sprintf('Maximum at lag %d',lags3(I3)))
+totalt_ns3=abs(M3(2,1)-M3(end,1));
+totalt_s3=totalt_ns3*10^-9;
+timeconvert3=totalt_s3/l3;
+timediff3=timeconvert3*abs(p3);
+d3=1482*timediff3;
+end
+
