@@ -15,10 +15,10 @@ ang=0:0.01:2*pi;
 
 
 % [d1,d2,d3]=getdistancev4(); %change this name as version updates
-d1=0.9366;%Hyde00
-d2=1.0908;%Hyd30
-d3=2.0867;%Hyd33
-d4=1.8614;%Hyd03 second attempt
+d1=1.4227;%Hyde00
+d2=1.6006;%Hyd30
+d3=1.2686;%Hyd33
+d4=0.9366;%Hyd03 second attempt
 
 
 xp1=d1*cos(ang);
