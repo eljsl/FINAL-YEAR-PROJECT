@@ -1,9 +1,9 @@
-function [ d1,d2,d3,d4 ] = getdistancev5()
+function [ d1,d2,d3,d4 ] = getdistancev5Test1()
 
-H1=load('Test3H1');
-H2=load('Test3H2');
-H3=load('Test3H3');
-H4=load('Test3H4');
+H1=load('Test1H1');
+H2=load('Test1H2');
+H3=load('Test1H3');
+H4=load('Test1H4');
 time=(1:1:(125000*3))/125000;
 c=1482;
 
@@ -12,21 +12,29 @@ figure
 plot(time,H1.('Source'))
 hold on
 plot(time,H1.('Record'))
+xlabel('Time (s)');
+ylabel('Amplitude (V)');
 %h2 data retrieval
 figure
 plot(time,H2.('Source'))
 hold on
 plot(time,H2.('Record'))
+xlabel('Time (s)');
+ylabel('Amplitude (V)');
 %h3 data retrieval
 figure
 plot(time,H3.('Source'))
 hold on
 plot(time,H3.('Record'))
+xlabel('Time (s)');
+ylabel('Amplitude (V)');
 %h4 data retrieval
 figure
 plot(time,H4.('Source'))
 hold on
 plot(time,H4.('Record'))
+xlabel('Time (s)');
+ylabel('Amplitude (V)');
 
 % h1 cross correlation
 [cc1,lags1]=xcorr(H1.('Source'),H1.('Record'));

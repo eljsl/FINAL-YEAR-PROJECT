@@ -1,4 +1,4 @@
-function [ avgx,avgy ] = locationcalculator( xypos,x3,y3 )
+function [ avgx,avgy ] = locationcalculatorTest3( xypos,x3,y3 )
 
 %Error avoiding
 a=sum(~isnan(xypos),1);

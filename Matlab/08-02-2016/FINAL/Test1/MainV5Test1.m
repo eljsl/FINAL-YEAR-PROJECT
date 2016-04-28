@@ -14,7 +14,7 @@ y4=2;
 ang=0:0.01:2*pi;
 
 
-[d1,d2,d3,d4]=getdistancev5(); %change this name as version updates
+[d1,d2,d3,d4]=getdistancev5Test1(); %change this name as version updates
 % d1=1.4227;%Hyde00
 % d2=1.6006;%Hyd30
 % d3=1.2686;%Hyd33
@@ -82,7 +82,7 @@ y=xypos(:,2);
 scatter(x,y,100,'r','+');
 
 %Run function to find mean x and y coordinates of location
-[mx,my]=locationcalculator(xypos);
+[mx,my]=locationcalculatorTest1(xypos);
 
 %Plot calculated position
 hold on
