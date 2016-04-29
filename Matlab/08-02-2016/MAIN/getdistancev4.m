@@ -12,8 +12,12 @@ l1=length(M1)-1;
 figure
 subplot(211)
 plot(microtime1,Source1)
+ylabel('Amplitude (V)');
+xlabel('Time (s)')
 subplot(212)
 plot(microtime1,Record1)
+ylabel('Amplitude (V)');
+xlabel('Time (s)')
 
 %h2 data retrieval
 M2 = csvread('Test2.csv',21,2,[21,2,721,6]);
