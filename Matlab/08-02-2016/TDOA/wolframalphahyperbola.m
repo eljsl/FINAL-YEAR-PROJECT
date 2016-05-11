@@ -1,6 +1,6 @@
 clear all
 close all
-
+% helutgotyv
 c=5;
 F2x=8;
 F2y=0;
